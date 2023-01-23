@@ -1,0 +1,23 @@
+-  npm install -g npm@9.2.0 /comando para actualizar npm
+
+ - Crear carpeta del proyecto: 
+
+ 1 - npm create vite@latest nombre-app    /sin mayúscula es para crear el proyecto de React
+ 2 - cd comision39525
+ 3 - npm install
+ 4 - npm run dev
+
+
+ // npx instala sin descargar create-react-app 
+   - npx create-react-app nombre-app
+   - cd prueba-npx
+   - npm start
+
+
+
+// create-react-app // nadie recomienda esta
+
+ - npm i create-react-app // descargar create-react-app toda la libreria
+ - create-react-app nombre-app
+ - cd prueba-npx
+ - npm start

@@ -1,0 +1,37 @@
+.nav {
+    background-color: rgb(1, 2, 22);
+    border-style: solid;
+    border-color: rgb(112, 112, 129);
+    border-radius: 30px;
+    box-shadow: 0px 7px 37px -2px rgb(112, 112, 129);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    position: sticky;
+    top: 5px;
+    z-index: 1;
+    margin: 0px 10px 0 10px;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 28px;
+    color:rgb(190, 190, 199);
+    padding: 3px;
+}
+
+.nav-item {
+    margin: 10px;
+    padding: 10px;
+}
+
+.logo img {
+    height: 70px;
+    width: 70px;
+    margin: 10px 0 10px 80px;
+}
+

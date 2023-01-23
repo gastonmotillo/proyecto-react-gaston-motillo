@@ -1,0 +1,15 @@
+.carrito img {
+    height: 50px;
+    width: 50px;
+    margin-right: 80px;
+    cursor: pointer;
+}
+
+.carrito span {
+    color: rgb(190, 190, 199);
+    font-size: 25px;
+    padding: 15px;
+    top: 17px;
+    right: 17px;
+    position: absolute;
+}
