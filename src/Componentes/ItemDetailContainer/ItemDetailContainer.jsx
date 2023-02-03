@@ -1,21 +1,19 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { gFetch } from "../../Productos/Productos";
-import ItemList from "../ItemList/ItemList";
-import "./ItemListContainer.css";
+import ItemDetail from "../ItemDetail/ItemDetail";
+import "./ItemDetailContainer.css";
 
-const ItemListContainer = () => {
+const ItemDetailContainer = () => {
   const [productos, setProductos] = useState([]);
   const [cargando, setCargando] = useState(true);
-
-  const { idCategoria } = useParams();
+  const { idProducto } = useParams();
 
   useEffect(() => {
-    if (idCategoria) {
+    if (idProducto) {
       gFetch()
         .then((res) => {
-          setProductos(res.filter((prod) => prod.categoria === idCategoria));
+          setProductos(res.find((prod) => prod.id === parseInt(idProducto)));
         })
         .catch((error) => console.log(error))
         .finally(() => setCargando(false));
@@ -27,19 +25,16 @@ const ItemListContainer = () => {
         .catch((error) => console.log(error))
         .finally(() => setCargando(false));
     }
-  }, [idCategoria]);
-
+  }, [idProducto]);
   return (
-    <>
-      <div className="item-list-cont">
-        {cargando ? (
+    <div className="item-detail-cont">
+      {cargando ? (
           <h2 className="cargando">Cargando...</h2>
         ) : (
-          <ItemList productos={productos} />
+      <ItemDetail productos={productos}/>
         )}
-      </div>
-    </>
+    </div>
   );
 };
 
-export default ItemListContainer;
+export default ItemDetailContainer;

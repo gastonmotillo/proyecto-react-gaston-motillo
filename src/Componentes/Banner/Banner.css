@@ -1,0 +1,20 @@
+.banner {
+    background-size: cover;
+    background-position: center;
+    height: 73vh;
+    margin-top: -150px;
+    background-image: linear-gradient(rgba(1, 2, 22, 0.205), rgb(1, 2, 22)),
+    url("http://www.suaya.com/wp-content/uploads/2017/06/bebidas.jpg");
+}
+
+.banner-container {
+    text-align: center;
+    padding: 15% 0;
+}
+
+.banner-container h1 {
+    text-align: center;
+    color:rgb(221, 221, 233);
+    font-size: 50px;
+    margin: 50px 30px; 
+}

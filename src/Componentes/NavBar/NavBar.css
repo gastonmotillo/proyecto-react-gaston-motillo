@@ -10,23 +10,35 @@
     flex-wrap: wrap;
     flex-direction: row;
     position: sticky;
-    top: 5px;
-    z-index: 1;
+    z-index: 3;
+    top: 0;
     margin: 0px 10px 0 10px;
 }
 
 .nav-list {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    font-size: 28px;
-    color:rgb(190, 190, 199);
     padding: 3px;
 }
 
 .nav-item {
+    font-size: 28px;
     margin: 10px;
     padding: 10px;
+    color:white;
+    text-decoration: none;
+}
+
+.nav-item-out:hover {
+    font-size: 28px;
+}
+
+.nav-item-out {
+    font-size: 26px;
+    margin: 10px;
+    padding: 10px;
+    color:rgb(190, 190, 199);
+    text-decoration: none;
 }
 
 .logo img {
@@ -34,4 +46,6 @@
     width: 70px;
     margin: 10px 0 10px 80px;
 }
+
+
 
