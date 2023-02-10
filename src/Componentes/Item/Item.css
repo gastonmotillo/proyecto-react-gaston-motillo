@@ -1,50 +1,39 @@
 
 .item-card {
-    width: 280px;
+    width: 300px;
     margin: 30px;
     padding: 15px;
     text-align: center;
-    box-shadow: 4px 7px 37px -2px rgba(190, 190, 199, 0.514);
     border-radius: 30px;
     background-color: white;
 }
 
+.item-card:hover {
+    box-shadow: 4px 7px 37px -2px rgba(190, 190, 199, 0.623);
+}
+
+.link {
+    text-decoration: none;
+}
+
 .item-card img {
-    width: 85%;
     height: 250px;
-    margin: 10px;
+    margin-bottom: 20px;
+    margin-top: 15px;
 }
 
 .item-nombre {
-    padding: 10px;
     color:rgb(1, 2, 22);
     background-color: white;
-    font-size: 37px;
+    font-size: 25px;
+    margin-top: 15px;
 }
 
 .item-precio {
     padding: 10px;
     color:rgb(1, 2, 22);
     background-color: white;
-    font-size: 30px;
+    font-size: 26px;
+    margin-top: 15px;
 }
 
-.item-detalle {
-    background-color: white;
-    color:rgb(1, 2, 22);
-    font-size: 1.1875rem;
-    font-weight: 600;
-    padding: 10px;
-    margin: 15px;
-    border-radius: 10px;
-    border: none;
-    transition: .5s ease;
-    box-shadow: 4px 7px 37px -2px rgb(1, 2, 22);
-    cursor: pointer;
-}
-
-.item-detalle:hover {
-    font-size: 1.25rem;
-    background-color:rgb(1, 2, 22);
-    color: white;
-}

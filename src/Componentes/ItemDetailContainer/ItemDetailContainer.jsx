@@ -11,12 +11,14 @@ const ItemDetailContainer = () => {
 
   useEffect(() => {
     if (idProducto) {
-      gFetch()
-        .then((res) => {
-          setProductos(res.find((prod) => prod.id === parseInt(idProducto)));
-        })
-        .catch((error) => console.log(error))
-        .finally(() => setCargando(false));
+      setTimeout(() => {
+        gFetch()
+          .then((res) => {
+            setProductos(res.find((prod) => prod.id === parseInt(idProducto)));
+          })
+          .catch((error) => console.log(error))
+          .finally(() => setCargando(false));
+      }, 2000);
     } else {
       gFetch()
         .then((res) => {
@@ -26,13 +28,14 @@ const ItemDetailContainer = () => {
         .finally(() => setCargando(false));
     }
   }, [idProducto]);
+
   return (
     <div className="item-detail-cont">
       {cargando ? (
-          <h2 className="cargando">Cargando...</h2>
-        ) : (
-      <ItemDetail productos={productos}/>
-        )}
+        <h2 className="cargando">Cargando...</h2>
+      ) : (
+        <ItemDetail productos={productos} />
+      )}
     </div>
   );
 };

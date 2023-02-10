@@ -1,0 +1,84 @@
+.itemcount {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 11px;
+}
+
+.contador {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.agregar {
+    background-color: white;
+    color:rgb(1, 2, 22);
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    transition: .5s ease;
+    box-shadow: 4px 7px 37px -2px rgb(1, 2, 22);
+    cursor: pointer;
+}
+
+.agregar:hover {
+    font-size: 21px;
+    background-color:rgb(1, 2, 22);
+    color: white;
+}
+
+.sumar {
+    background-color: white;
+    color:rgb(1, 2, 22);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    transition: .5s ease;
+    box-shadow: 4px 7px 37px -2px rgb(1, 2, 22);
+    cursor: pointer;
+}
+
+.sumar:hover {
+    background-color:rgb(1, 2, 22);
+    color: white;
+}
+
+.restar {
+    background-color: white;
+    color:rgb(1, 2, 22);
+    font-size: 17px;
+    font-weight: 600;
+    padding: 10px;
+    margin: 15px;
+    border-radius: 10px;
+    border: none;
+    transition: .5s ease;
+    box-shadow: 4px 7px 37px -2px rgb(1, 2, 22);
+    cursor: pointer;
+}
+
+.restar:hover {
+    background-color:rgb(1, 2, 22);
+    color: white;
+}
+
+.numero {
+    padding: 10px;
+    color:rgb(1, 2, 22);
+    background-color: white;
+    font-size: 30px;
+}
+
+.stock {
+    color:red;
+    font-size: 35px;
+    margin-left: 67px;
+}

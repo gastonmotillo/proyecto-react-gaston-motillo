@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-items: center;
     padding: 30px;
     background-color: rgb(1, 2, 22);
 }
@@ -12,5 +11,4 @@
     color:rgb(190, 190, 199);
     font-size: 50px;
     margin: 20px 30px;
-    background-color: rgb(1, 2, 22);
 }

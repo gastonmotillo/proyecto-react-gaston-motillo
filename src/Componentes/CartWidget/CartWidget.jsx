@@ -1,13 +1,18 @@
-import carrito from '../../Imagenes/carrito.png'
-import './CartWidget.css'
+import { useCartContext } from "../../Context/CartContext";
+import carrito from "../../Imagenes/carrito.png";
+import "./CartWidget.css";
 
 const CartWidget = () => {
-  return (
-    <div className='carrito'>
-        <img src={carrito} alt="Carrito" />
-        <span>0</span>
-    </div>
-  )
-}
+  const { cartList } = useCartContext();
 
-export default CartWidget
+  const cantTotal = cartList.reduce((acc, prod) => acc + prod.cantidad, 0);
+
+  return (
+    <div className="carrito">
+      <img src={carrito} alt="Carrito" />
+      {cantTotal > 0 ? <span>{cantTotal}</span> : ""}
+    </div>
+  );
+};
+
+export default CartWidget;

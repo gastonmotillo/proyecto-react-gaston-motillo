@@ -20,12 +20,14 @@ const ItemListContainer = () => {
         .catch((error) => console.log(error))
         .finally(() => setCargando(false));
     } else {
-      gFetch()
-        .then((res) => {
-          setProductos(res);
-        })
-        .catch((error) => console.log(error))
-        .finally(() => setCargando(false));
+      setTimeout(() => {
+        gFetch()
+          .then((res) => {
+            setProductos(res);
+          })
+          .catch((error) => console.log(error))
+          .finally(() => setCargando(false));
+      }, 2000);
     }
   }, [idCategoria]);
 
