@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { gFetch } from "../../Productos/Productos";
+import { collection, getDocs, getFirestore, query, where } from "firebase/firestore";
 import ItemList from "../ItemList/ItemList";
 import "./ItemListContainer.css";
 
@@ -12,24 +12,17 @@ const ItemListContainer = () => {
   const { idCategoria } = useParams();
 
   useEffect(() => {
-    if (idCategoria) {
-      gFetch()
-        .then((res) => {
-          setProductos(res.filter((prod) => prod.categoria === idCategoria));
-        })
-        .catch((error) => console.log(error))
-        .finally(() => setCargando(false));
-    } else {
-      setTimeout(() => {
-        gFetch()
-          .then((res) => {
-            setProductos(res);
-          })
-          .catch((error) => console.log(error))
-          .finally(() => setCargando(false));
-      }, 2000);
-    }
-  }, [idCategoria]);
+    
+    const db = getFirestore();
+    const queryC = collection(db, "Productos");
+    const queryF = idCategoria? query(queryC, where("categoria", "==", idCategoria)) : queryC;
+    
+    getDocs(queryF)
+    .then(resp => setProductos(resp.docs.map( product =>({id: product.id, ...product.data()}))))   
+    .catch((error) => console.log(error))
+    .finally(() => setCargando(false));
+
+  }, [idCategoria])
 
   return (
     <>

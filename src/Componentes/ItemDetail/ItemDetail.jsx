@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { toast } from "react-toastify";
 import { useCartContext } from "../../Context/CartContext";
 import ItemCount from "../ItemCount/ItemCount";
 import "./ItemDetail.css";
@@ -24,9 +25,23 @@ const ItemDetail = ({ productos }) => {
 
   const { agregarCarrito } = useCartContext();
 
+  const prodAgregado = () => {
+    toast.success("Producto Agregado!", {
+      position: "top-right",
+      autoClose: 800,
+      hideProgressBar: true,
+      closeOnClick: false,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
+  };
+
   const onAdd = (cantidad) => {
     setBotones(false);
     agregarCarrito(productos, cantidad);
+    prodAgregado()
   };
 
   return (

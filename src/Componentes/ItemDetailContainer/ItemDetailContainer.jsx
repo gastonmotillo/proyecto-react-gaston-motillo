@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { gFetch } from "../../Productos/Productos";
+import { doc, getDoc, getFirestore } from "firebase/firestore";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import "./ItemDetailContainer.css";
 
@@ -10,23 +10,14 @@ const ItemDetailContainer = () => {
   const { idProducto } = useParams();
 
   useEffect(() => {
-    if (idProducto) {
-      setTimeout(() => {
-        gFetch()
-          .then((res) => {
-            setProductos(res.find((prod) => prod.id === parseInt(idProducto)));
-          })
-          .catch((error) => console.log(error))
-          .finally(() => setCargando(false));
-      }, 2000);
-    } else {
-      gFetch()
-        .then((res) => {
-          setProductos(res);
-        })
-        .catch((error) => console.log(error))
-        .finally(() => setCargando(false));
-    }
+    const db = getFirestore();
+    const queryD = doc(db, "Productos", idProducto);
+    setTimeout(() => {
+      getDoc(queryD)
+      .then(resp => setProductos({id: resp.id, ...resp.data()}))
+      .catch((error) => console.log(error))
+      .finally(() => setCargando(false))
+    }, 1000);
   }, [idProducto]);
 
   return (

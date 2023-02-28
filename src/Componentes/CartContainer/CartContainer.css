@@ -68,7 +68,7 @@
     transition: 1s;
 }
 
-.pagar {
+.orden {
     background-color: green;
     color:rgb(1, 2, 22);
     font-size: 1.1875rem;
@@ -78,6 +78,12 @@
     border-radius: 10px;
     border: none;
     cursor: pointer;
+}
+
+.orden:hover {
+    background-color:rgb(1, 2, 22);
+    color: white;
+    transition: .5s;
 }
 
 .vaciar {
@@ -92,11 +98,6 @@
     cursor: pointer;
 }
 
-.pagar:hover {
-    background-color:rgb(1, 2, 22);
-    color: white;
-    transition: .5s;
-}
 
 .vaciar:hover {
     background-color:rgb(1, 2, 22);
@@ -129,13 +130,13 @@
 
 .item-cart-vacio h2 {
     color:rgb(190, 190, 199);
-    font-size: 50px;
+    font-size: 40px;
+    margin-bottom: 10px;
 }
 
 .item-cart-vacio p {
     color:rgb(190, 190, 199);
-    font-size: 20px;
-    margin-top: 20px;
+    font-size: 30px;
 }
 
 .boton-volver {
@@ -145,6 +146,7 @@
     font-weight: 600;
     padding: 10px;
     margin-top: 40px;
+    margin-bottom: 20px;
     border-radius: 10px;
     border: none;
     transition: .5s ease;

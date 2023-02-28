@@ -1,0 +1,10 @@
+form input {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: rgb(1, 2, 22);
+    color: whitesmoke;
+    border-radius: 4px;
+    border: 2px solid rgba(25, 0, 255, 0.336);
+}
