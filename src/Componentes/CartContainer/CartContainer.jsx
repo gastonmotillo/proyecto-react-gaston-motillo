@@ -53,7 +53,7 @@ const CartContainer = () => {
         repetirEmail:""
       })
     }) } else {
-      alert("Hay campos sin completar o el mail no coincide en ambos campos")
+      alert("Por favor verifique si hay campos sin completar o si el mail no coincide en ambos campos. Gracias!")
     }
   }  
 
